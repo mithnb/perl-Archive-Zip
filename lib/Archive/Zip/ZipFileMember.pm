@@ -356,7 +356,7 @@ sub _readDataDescriptor {
       unless defined($self->{'eocdCrc32'});
     $self->{'crc32'}            = $crc32;
     $self->{'compressedSize'}   = $compressedSize;
-    $self->{'uncompressedSize'} = $uncompressedSize;
+    $self->{'uncompressedSize'} = $uncompressedSize if $uncompressedSize;
 
     return AZ_OK;
 }
