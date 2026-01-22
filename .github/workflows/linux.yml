@@ -43,7 +43,7 @@ jobs:
       run: |
         cpanm --quiet --installdeps --notest .
         # make sure have latest version of prove
-        cpanm App::Prove
+        cpanm App::Prove Compress::Raw::Zlib
     - name: Build
       run: perl Makefile.PL && make
     - name: Standard Test
